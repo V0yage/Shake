@@ -1,11 +1,11 @@
 <?php
-	//declare(strict_types=1);
+	declare(strict_types=1);
 	
 	function getSum(int $x, int $y) {
 		return $x + $y;
 	}
 	
-	$x = 5.5;
+	$x = 5;
 	$y = 7;
 ?>
 
