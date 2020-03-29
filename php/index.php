@@ -5,6 +5,11 @@
 		return $x + $y;
 	}
 	
+	function getRandSin()
+	{
+		return sin(rand());
+	}
+	
 	$x = 5;
 	$y = 7;
 ?>
@@ -18,6 +23,9 @@
 	<body>
 		<div>
 			<?= "$x + $y = " . getSum($x, $y) ?>
+		</div>
+		<div>
+			<?= 'Синус случайного числа: ' . getRandSin() ?>
 		</div>
 	</body>
 </html>
