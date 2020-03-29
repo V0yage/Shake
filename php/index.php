@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<div>
-			<?= "$x + $y = getSum($x, $y)" ?>
+			<?= "$x + $y = " . getSum($x, $y) ?>
 		</div>
 	</body>
 </html>
