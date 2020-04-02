@@ -1,8 +1,8 @@
 <?php
-	//include __DIR__ . '/functions.php';
-	//echo __DIR__;
-	
 	declare(strict_types=1);
+	
+	//include __DIR__ . '/functions.php';
+	echo __DIR__;
 	
 	function getSum(int $x, int $y) {
 		return $x + $y;
