@@ -1,6 +1,6 @@
 <?php
 	//include __DIR__ . '/functions.php';
-	echo __DIR__;
+	//echo __DIR__;
 	
 	declare(strict_types=1);
 	
