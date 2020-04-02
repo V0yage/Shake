@@ -1,4 +1,6 @@
 <?php
+	include __DIR__ . '/functions.php';
+	
 	declare(strict_types=1);
 	
 	function getSum(int $x, int $y) {
@@ -26,6 +28,9 @@
 		</div>
 		<div>
 			<?= 'Синус случайного числа: ' . getRandSin() ?>
+		</div>
+		<div>
+			25 is even:<?= isEven(25) ?>
 		</div>
 	</body>
 </html>
