@@ -30,7 +30,7 @@
 			<?= 'Синус случайного числа: ' . getRandSin() ?>
 		</div>
 		<div>
-			25 is even: <?= isEven(25) ?>
+			25 id <?= isEven(25) ? 'even' : 'odd' ?>
 		</div>
 	</body>
 </html>
