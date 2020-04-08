@@ -26,7 +26,7 @@
 				Сообщение:<br>
 				<textarea name="msg">Сообщение</textarea>
 			</p>
-			<input type="hidden" name="from" value="admin@webshake.loc">
+			<input type="hidden" name="from" value="no-reply@gmail.com">
 			<input type="hidden" name="subj" value="Test message">
 			<input type="submit" value="Send">
 		</form>

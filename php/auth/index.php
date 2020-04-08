@@ -12,7 +12,7 @@
 		<?php else: ?>
 		Добро пожаловать, <?= $login?>
 		<br>
-		<a href="/logout.php">Выйти</a>
+		<a href="./logout.php">Выйти</a>
 		<?php endif; ?>
 	</body>
 </html>
