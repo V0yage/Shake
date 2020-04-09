@@ -1,8 +1,17 @@
 <?php
     require_once __DIR__ . '/auth/auth.php';
     require_once __DIR__ . '/upload.php';
+    require_once __DIR__ . '/media.php';
 
     $authUser = getAuthUser();
+
+    if ($authUser !== null) {
+        if (!empty($_FILES)) {
+            $uploadResult = uploadFile('attach');
+        }
+    }
+
+    $mediaItems = getMediaItems();
 ?>
 
 <html>
@@ -21,15 +30,24 @@
             <p>For editing media library you should <a href="./auth/">Login</a></p>
         <?php endif; ?>
         <div class="albom">
-            <div class="albom-item"></div>
+            <?php foreach ($mediaItems as $mediaItem): ?>
+                <div class="albom-item">
+                    <a href="<?= $mediaItem ?>" target="_blank">
+                        <img src="<?= $mediaItem ?>">
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
         <?php if ($authUser !== null): ?>
-        <div>
-            <form action="./upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="attach">
-                <input type="submit" value="Send">
-            </form>
-        </div>
+            <?php if (!empty($uploadResult)): ?>
+                <p class="error-msg"><?= $uploadResult ?></p>
+            <?php endif; ?>
+            <div>
+                <form action="./" method="post" enctype="multipart/form-data">
+                    <input type="file" name="attach">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
         <?php endif; ?>
     </body>
 </html>
